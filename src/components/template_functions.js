@@ -71,6 +71,120 @@ let templateStore = [
   }
 ];
 
+export const mergetags_list = [
+  {
+    title: 'Site',
+    menu: [
+      {
+        value: 'Site.Title',
+        title: 'Site Title'
+      },
+      {
+        value: 'Site.Name',
+        title: 'Site Name'
+      },
+      {
+        value: 'Site.Tagline',
+        title: 'Site Tagline'
+      }
+    ]
+  },
+  {
+    title: 'Page',
+    menu: [
+      {
+        value: 'Page.Title',
+        title: 'Page Title'
+      },
+      {
+        value: 'Page.Subtitle',
+        title: 'Page Subtitle'
+      },
+      {
+        value: 'Page.CTA.Link',
+        title: 'CTA Link'
+      },
+      {
+        value: 'Page.CTA.Text',
+        title: 'CTA Text'
+      }
+    ]
+  },
+  {
+    title: 'Post',
+    menu: [
+      {
+        value: 'Post.Title',
+        title: 'Post Title'
+      },
+      {
+        value: 'Post.Content',
+        title: 'Post Content'
+      },
+      {
+        value: 'Post.Date',
+        title: 'Post Date'
+      },
+      {
+        value: 'Post.Category',
+        title: 'Post Category'
+      },
+      {
+        value: 'Post.Tags',
+        title: 'Post Tags'
+      }
+    ]
+  },
+  {
+    title: 'Author',
+    menu: [
+      {
+        value: 'Author.Name',
+        title: 'Author Name'
+      }
+    ]
+  },
+  {
+    title: 'Product',
+    menu: [
+      {
+        value: 'Product.Name',
+        title: 'Product Name'
+      },
+      {
+        value: 'Product.Description',
+        title: 'Product Description'
+      },
+      {
+        value: 'Product.Price',
+        title: 'Product Price'
+      }
+    ]
+  },
+  {
+    title: 'Links',
+    menu: [
+      {
+        value: 'Links.PrivacyPolicy',
+        title: 'Privacy Policy Link'
+      },
+      {
+        value: 'Links.TermsOfService',
+        title: 'Terms of Service Link'
+      }
+    ]
+  },
+  {
+    title: 'Current',
+    menu: [
+      {
+        value: 'Current.Year',
+        title: 'Current Year'
+      }
+    ]
+  }
+];
+
 const mockResponse = (data) => Promise.resolve(data);
 
 // Template management functions

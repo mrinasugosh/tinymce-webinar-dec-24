@@ -11,6 +11,7 @@ import {
   advtemplate_delete_category,
   advtemplate_move_template,
   advtemplate_move_category_items,
+  mergetags_list,
 } from './template_functions';
 
 import { ai_request } from './ai_functions';
@@ -37,7 +38,9 @@ export default function TinyEditor({ editorRef }) {
         },
 
         height: 800,
+
         advcode_inline: true,
+
         tinycomments_mentions_enabled: true,
         readonly: true,
         mentions_item_type: 'profile',
@@ -67,138 +70,12 @@ export default function TinyEditor({ editorRef }) {
         advtemplate_delete_category,
         advtemplate_move_template,
         advtemplate_move_category_items,
-        ai_request,
-
         mergetags_prefix: '{{',
         mergetags_suffix: '}}',
-        mergetags_list: [
-          {
-            title: 'Site',
-            menu: [
-              {
-                value: 'Site.Title',
-                title: 'Site Title'
-              },
-              {
-                value: 'Site.Name',
-                title: 'Site Name'
-              },
-              {
-                value: 'Site.Tagline',
-                title: 'Site Tagline'
-              }
-            ]
-          },
-          {
-            title: 'Page',
-            menu: [
-              {
-                value: 'Page.Title',
-                title: 'Page Title'
-              },
-              {
-                value: 'Page.Subtitle',
-                title: 'Page Subtitle'
-              },
-              {
-                value: 'Page.CTA.Link',
-                title: 'CTA Link'
-              },
-              {
-                value: 'Page.CTA.Text',
-                title: 'CTA Text'
-              }
-            ]
-          },
-          {
-            title: 'Post',
-            menu: [
-              {
-                value: 'Post.Title',
-                title: 'Post Title'
-              },
-              {
-                value: 'Post.Content',
-                title: 'Post Content'
-              },
-              {
-                value: 'Post.Date',
-                title: 'Post Date'
-              },
-              {
-                value: 'Post.Category',
-                title: 'Post Category'
-              },
-              {
-                value: 'Post.Tags',
-                title: 'Post Tags'
-              }
-            ]
-          },
-          {
-            title: 'Author',
-            menu: [
-              {
-                value: 'Author.Name',
-                title: 'Author Name'
-              }
-            ]
-          },
-          {
-            title: 'Product',
-            menu: [
-              {
-                value: 'Product.Name',
-                title: 'Product Name'
-              },
-              {
-                value: 'Product.Description',
-                title: 'Product Description'
-              },
-              {
-                value: 'Product.Price',
-                title: 'Product Price'
-              }
-            ]
-          },
-          {
-            title: 'Links',
-            menu: [
-              {
-                value: 'Links.PrivacyPolicy',
-                title: 'Privacy Policy Link'
-              },
-              {
-                value: 'Links.TermsOfService',
-                title: 'Terms of Service Link'
-              }
-            ]
-          },
-          {
-            title: 'Current',
-            menu: [
-              {
-                value: 'Current.Year',
-                title: 'Current Year'
-              }
-            ]
-          }
-        ],
+        mergetags_list,
         content_css: '/src/styles/mergetags.css',
-        content_style: `
-          .mce-content-body .mce-mergetag:hover {
-            background-color: rgba(0, 108, 231, .1);
-            border-radius: 3px;
-          }
-          
-          .mce-content-body .mce-mergetag-affix {
-            background-color: rgba(0, 108, 231, .1);
-            color: #006ce7;
-            border-radius: 3px;
-            font-family: monospace;
-            padding: 0 2px;
-          }
-        `,
+
+        ai_request,
       }}
     />
     </>
