@@ -1,70 +1,71 @@
 // Mock data store
 let templateStore = [
   {
-    id: 'travel-templates',
-    title: 'Travel Templates',
+    id: 'reusable-content-blocks',
+    title: 'Reusable Content Blocks',
+    locked: true,
     items: [
       {
-        id: 'travel-blog-post',
-        title: 'Travel Blog Post',
-        content: `<article class="travel-post">
-  <h1>{{Post.Title}}</h1>
-  <div class="post-meta">
-    <span class="author">By {{Author.Name}}</span>
-    <span class="date">Published on {{Post.Date}}</span>
-    <span class="category">{{Post.Category}}</span>
-  </div>
-  <div class="post-content">
-    {{mce-cursor}}
-    <h2>Overview</h2>
-    <p>Your travel experience goes here...</p>
-    <h2>Must-See Attractions</h2>
-    <ul>
-      <li>Attraction 1</li>
-      <li>Attraction 2</li>
-      <li>Attraction 3</li>
-    </ul>
-    <h2>Travel Tips</h2>
-    <p>Share your insider tips here...</p>
-  </div>
-  <div class="post-footer">
-    <div class="tags">
-      Tags: {{Post.Tags}}
-    </div>
-  </div>
-</article>`
+        id: 'header-block',
+        title: 'Header Block',
+        content: `<header>
+  <h1>{{Site.Title}}</h1>
+  <p>{{Site.Tagline}}</p>
+</header>`
       },
       {
-        id: 'quick-travel-tip',
-        title: 'Quick Travel Tip',
-        content: `<div class="travel-tip">
-  <h3>💡 Quick Tip: {{mce-cursor}}</h3>
-  <p>Your travel tip details here...</p>
-  <div class="tip-meta">
-    <span class="location">📍 Location: {{Location}}</span>
-    <span class="category">🏷️ Category: {{Category}}</span>
+        id: 'hero-section',
+        title: 'Hero Section',
+        content: `<section class="hero">
+  <div class="hero-content">
+    <h1>{{Page.Title}}</h1>
+    <p>{{Page.Subtitle}}</p>
+    <a href="{{Page.CTA.Link}}" class="btn">{{Page.CTA.Text}}</a>
   </div>
-</div>`
+</section>`
+      },
+      {
+        id: 'footer-block',
+        title: 'Footer Block',
+        content: `<footer>
+  <div class="footer-info">
+    <p>&copy; {{Current.Year}} {{Site.Name}}. All rights reserved.</p>
+    <nav>
+      <ul>
+        <li><a href="{{Links.PrivacyPolicy}}">Privacy Policy</a></li>
+        <li><a href="{{Links.TermsOfService}}">Terms of Service</a></li>
+      </ul>
+    </nav>
+  </div>
+</footer>`
       }
     ]
   },
   {
-    id: 'content-blocks',
-    title: 'Content Blocks',
+    id: 'content-templates',
+    title: 'Content Templates',
     items: [
       {
-        id: 'photo-gallery',
-        title: 'Photo Gallery',
-        content: `<div class="photo-gallery">
-  <h2>Photo Gallery: {{Gallery.Title}}</h2>
-  <div class="gallery-grid">
+        id: 'blog-post-template',
+        title: 'Blog Post Template',
+        content: `<article>
+  <h1>{{Post.Title}}</h1>
+  <p><em>By {{Author.Name}} on {{Post.Date}}</em></p>
+  <div class="post-content">
     {{mce-cursor}}
-    <figure class="gallery-item">
-      <img src="{{Photo1.URL}}" alt="{{Photo1.Description}}">
-      <figcaption>{{Photo1.Caption}}</figcaption>
-    </figure>
+    {{Post.Content}}
   </div>
-</div>`
+</article>`
+      },
+      {
+        id: 'product-page-template',
+        title: 'Product Page Template',
+        content: `<section class="product-page">
+  <h1>{{Product.Name}}</h1>
+  <p>{{Product.Description}}</p>
+  <div class="product-price">Price: {{Product.Price}}</div>
+  <button>Add to Cart</button>
+</section>`
       }
     ]
   }
