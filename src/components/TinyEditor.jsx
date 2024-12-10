@@ -11,7 +11,6 @@ import {
   advtemplate_delete_category,
   advtemplate_move_template,
   advtemplate_move_category_items,
-  advtemplate_templates,
 } from './template_functions';
 
 import { ai_request } from './ai_functions';
@@ -27,7 +26,7 @@ export default function TinyEditor({ editorRef }) {
       onInit={(_evt, editor) => editorRef.current = editor}
       init={{
         plugins: 'advcode tinycomments mentions advtemplate ai anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount linkchecker markdown',
-        toolbar: 'addtemplate inserttemplate | aidialog aishortcuts | undo redo | addcomment showcomments | blocks fontfamily fontsize | bold italic underline strikethrough | code link image media table | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat',
+        toolbar: 'inserttemplate addtemplate | aidialog aishortcuts | undo redo | addcomment showcomments | blocks fontfamily fontsize | bold italic underline strikethrough | code link image media table | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat',
         menu: {
           tc: {
             title: 'TinyComments',
@@ -56,7 +55,16 @@ export default function TinyEditor({ editorRef }) {
         tinycomments_can_resolve,
 
         contextmenu: 'advtemplate',
-        advtemplate_templates,
+        advtemplate_list,
+        advtemplate_get_template,
+        advtemplate_create_category,
+        advtemplate_create_template,
+        advtemplate_rename_category,
+        advtemplate_rename_template,
+        advtemplate_delete_template,
+        advtemplate_delete_category,
+        advtemplate_move_template,
+        advtemplate_move_category_items,
         ai_request,
       }}
       initialValue=""
