@@ -70,5 +70,6 @@ Each branch contains examples to build upon the specific feature.
 After completing the steps in each branch, explore a fully integrated demo showcasing all the features covered in the webinar in the main branch:
 
 
+<img width="1060" alt="Screenshot 2024-12-09 at 10 40 44 PM" src="https://github.com/user-attachments/assets/c05ae5d8-7d7b-4183-9549-089e9ea719d6">
 
 Thank you for joining the "What's New with TinyMCE" webinar and if you haven't already, be sure to sign up for our [14 day free trial](https://www.tiny.cloud/auth/signup?utm_campaign=tinymce_webinar_q4_2024&utm_source=github&utm_medium=referral) to try TinyMCE for yourself! Happy coding!
