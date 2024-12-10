@@ -1,7 +1,8 @@
 import React from 'react';
 
-const Sidebar = ({ formData, onFormChange }) => {
+const Sidebar = ({ formData, onFormChange, toggleReadOnlyMode }) => {
   return (
+    <>
     <div className="sidebar">
       <button type="button" className="btn">Save</button>
       <div className="form-group">
@@ -32,7 +33,9 @@ const Sidebar = ({ formData, onFormChange }) => {
           <img src={formData.cover} alt="Cover" className="img-fluid mt-3" />
         )}
       </div>
+      <button type="button" className="btn" onClick={toggleReadOnlyMode}> Readonly Mode </button>
     </div>
+    </>
   );
 };
 

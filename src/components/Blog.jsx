@@ -1,7 +1,7 @@
 import React from 'react';
 import TinyEditor from './TinyEditor';
 
-const Blog = ({ formData, onFormChange }) => {
+const Blog = ({ formData, onFormChange, editorRef }) => {
   return (
     <div className="blogForm">
       <input
@@ -12,7 +12,7 @@ const Blog = ({ formData, onFormChange }) => {
         value={formData.title}
         onChange={onFormChange}
       />
-      <TinyEditor />
+      <TinyEditor editorRef={editorRef} />
     </div>
   );
 };

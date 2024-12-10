@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import Sidebar from './components/Sidebar';
 import Blog from './components/Blog';
 import './styles/App.css';
 
 function App() {
+  const editorRef = useRef(null);
+
   const [formData, setFormData] = useState({
     title: '',
     content: '',
@@ -22,11 +24,19 @@ function App() {
     });
   };
 
+  const toggleReadOnlyMode = () => {
+    if (editorRef.current) {
+      const editor = editorRef.current;
+      const isReadonly = editor.mode.get() === 'readonly';
+      editor.mode.set(isReadonly ? 'design' : 'readonly');
+    }
+  };
+
   return (
     <div className="container">
       <div className="mainContent">
-        <Blog formData={formData} onFormChange={handleFormChange} />
-        <Sidebar formData={formData} handleFormChange={handleFormChange} />
+        <Blog formData={formData} onFormChange={handleFormChange} editorRef={editorRef} />
+        <Sidebar formData={formData} handleFormChange={handleFormChange} toggleReadOnlyMode={toggleReadOnlyMode} />
       </div>
     </div>
   );
