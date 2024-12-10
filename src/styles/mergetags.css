@@ -1,0 +1,21 @@
+.mce-content-body .mce-mergetag {
+  cursor: pointer;
+  color: #006ce7;
+  display: inline-block;
+  font-family: monospace;
+  border-radius: 3px;
+  padding: 0 2px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.mce-content-body .mce-mergetag:hover {
+  background-color: rgba(0, 108, 231, 0.1);
+}
+
+.mce-content-body .mce-mergetag-affix {
+  background-color: rgba(0, 108, 231, 0.1);
+  color: #006ce7;
+  border-radius: 3px;
+  font-family: monospace;
+  padding: 0 2px;
+}

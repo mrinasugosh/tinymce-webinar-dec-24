@@ -24,6 +24,7 @@ export default function TinyEditor({ editorRef }) {
     <>
     <Editor
       apiKey={import.meta.env.VITE_TINYMCE_API_KEY}
+      initialValue=""
       onInit={(_evt, editor) => editorRef.current = editor}
       init={{
         plugins: 'advcode tinycomments mentions advtemplate ai anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount linkchecker markdown mergetags',
@@ -199,7 +200,6 @@ export default function TinyEditor({ editorRef }) {
           }
         `,
       }}
-      initialValue=""
     />
     </>
   );
